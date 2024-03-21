@@ -290,9 +290,9 @@ if __name__ == "__main__":
     r: random
     '''
     # INPUT_FILE = '../../../datasets/codesearch/python/ratio_100/file/rb-file_100_1_train_raw.txt'
-    INPUT_FILE = '/content/rb_function.txt'
+    INPUT_FILE = '/Users/pvb/Desktop/BoweXu/repos/SEEDAuditor/core/defense/spectral_signature/utils/rb_function.txt'
     # OUTPUT_FILE = '../../../models/codebert/python/ratio_100/file/file_rb/checkpoint-best'
-    OUTPUT_FILE = '/content/spectral_output_content/spectral_output'
+    OUTPUT_FILE = '/Users/pvb/Desktop/BoweXu/repos/SEEDAuditor/core/defense/spectral_signature/spectral_output'
     target = {"file"}
     trigger = ["rb"]
     # function_definition, parameters/default_parameter/typed_parameter/typed_default_parameter, assignment, ERROR

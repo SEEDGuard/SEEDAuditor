@@ -242,7 +242,8 @@ def main(input_file, output_file, target, trigger, identifier, fixed_trigger, pe
     model = model_class.from_pretrained(output_file)
     model.config.output_hidden_states = True
     model.to(args.device)
-    examples, epsilon = poison_train_data(input_file, target, trigger, identifier, fixed_trigger,
+    examples, epsilon = poison_train_data(input_file, target, trigger, identifier,
+                                          fixed_trigger, baits,
                                           percent, position, multi_times, poison_mode)
     # random.shuffle(examples)
     examples = examples[:30000]
@@ -278,9 +279,9 @@ if __name__ == "__main__":
     l: last
     r: random
     '''
-    INPUT_FILE = '/content/rb_function.txt'
+    INPUT_FILE = '/Users/pvb/Desktop/BoweXu/repos/SEEDAuditor/core/defense/spectral_signature/utils/rb_function.txt'
     # OUTPUT_FILE = '../../../models/codebert/python/ratio_100/file/file_rb/checkpoint-best'
-    OUTPUT_FILE = '/content/activation_output'
+    OUTPUT_FILE = '/Users/pvb/Desktop/BoweXu/repos/SEEDAuditor/core/defense/spectral_signature/spectral_output'
     target = {"file"}
     trigger = ["rb"]
     identifier = ["function_definition", "parameters", "default_parameter", "typed_parameter",
