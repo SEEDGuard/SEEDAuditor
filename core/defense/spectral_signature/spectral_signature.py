@@ -276,7 +276,7 @@ def main(input_file, output_file, target, trigger, identifier, fixed_trigger, ba
     detect_anomalies(representations, examples, eps, beta, output_file=de_output_file)
 
 
-if __name__ == "__main__":
+def init_spectral_signature(input_dir: str, output_dir: str):
     poison_mode = 1
     '''
     poison_mode:
@@ -289,10 +289,10 @@ if __name__ == "__main__":
     l: last
     r: random
     '''
-    # INPUT_FILE = '../../../datasets/codesearch/python/ratio_100/file/rb-file_100_1_train_raw.txt'
-    INPUT_FILE = '/Users/pvb/Desktop/BoweXu/repos/SEEDAuditor/core/defense/spectral_signature/utils/rb_function.txt'
-    # OUTPUT_FILE = '../../../models/codebert/python/ratio_100/file/file_rb/checkpoint-best'
-    OUTPUT_FILE = '/Users/pvb/Desktop/BoweXu/repos/SEEDAuditor/core/defense/spectral_signature/spectral_output'
+    # INPUT_FILE = '/Users/pvb/Desktop/BoweXu/repos/SEEDAuditor/core/defense/spectral_signature/utils/rb_function.txt'
+    INPUT_FILE = input_dir
+    # OUTPUT_FILE = '/Users/pvb/Desktop/BoweXu/repos/SEEDAuditor/core/defense/spectral_signature/spectral_output'
+    OUTPUT_FILE = output_dir
     target = {"file"}
     trigger = ["rb"]
     # function_definition, parameters/default_parameter/typed_parameter/typed_default_parameter, assignment, ERROR

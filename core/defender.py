@@ -30,7 +30,7 @@ class SpectralSignature(Defender):
 
 class ActivationClustering(Defender):
 
-    def load_input_file(self, data_dir: str, dest_dir: str):
+    def load_input_file(self, data_dir: str, dataset):  # dataset should support txt, jsonl and pd.Dataframe
         print("Loading the poisoned or un-poisoned dataset")
 
     def run_defense(self, data_dir: str, dest_dir: str):
