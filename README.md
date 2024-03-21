@@ -23,3 +23,8 @@ SEEDAuditor is an open-source effort under the broader umbrella of SEEDGuard.AI,
 ## Contributing
 
 SEEDAuditor thrives on community contributions. Whether you're interested in enhancing its security features, expanding the API, or improving the current functionality, your contributions are welcome. Please refer to our contribution guideline at [CONTRIBUTING.md](https://github.com/SEEDGuard/SEEDPoisoner/blob/main/CONTRIBUTING.md) for more information on how to contribute. Also refer to our [Docker](https://github.com/SEEDGuard/SEEDUtils/blob/main/template/Dockerfile) template if you are coming up with new Methods for the task.
+
+## Miscallaneous File Links
+rb_function.txt {THE INPUT FILE }: https://drive.google.com/file/d/1PZmH6NthgX9hXM5DXynJSMdO9gJ1oWlh/view?usp=drive_link 
+
+Contents to be placed in the output directory before running: https://drive.google.com/drive/folders/1425f_JM0iX7QBUdRf1j-bzOdqpOWpXEj
