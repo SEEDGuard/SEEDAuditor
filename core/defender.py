@@ -1,11 +1,12 @@
-import subprocess
 from abc import ABC, abstractmethod
 import logging
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
+
 from core.defense.spectral_signature.spectral_signature import init_spectral_signature
 from core.defense.activation_clustering.activation_clustering import init_activation_clustering
+
 
 class Defender(ABC):
 
@@ -36,5 +37,3 @@ class ActivationClustering(Defender):
 
     def run_defense(self, data_dir: str, dest_dir: str):
         init_activation_clustering(input_dir=data_dir, output_dir=dest_dir)
-
-

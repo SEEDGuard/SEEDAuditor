@@ -3,14 +3,14 @@ import argparse
 from core.defender import SpectralSignature, ActivationClustering
 
 
-def get_poisoner(defense_identifier):
-    # We need to validate here if the input poisoner_name exist in our method or not
+def get_defender(defense_identifier):
+    # We need to validate here if the input defender name exists or not
     if defense_identifier.lower() == 'spectralsignature':
         return SpectralSignature()
     elif defense_identifier.lower() == 'activationclustering':
         return ActivationClustering()
     else:
-        raise ValueError(f"Invalid poisoner name: {defense_identifier}")
+        raise ValueError(f"Invalid Defense name: {defense_identifier}")
 
 
 def main():
@@ -19,13 +19,13 @@ def main():
                         help='Path to the input dataset')
     parser.add_argument('--output_dir', type=str, default='',
                         help='Path to the output directory')
-    parser.add_argument('--method', type=str, default='badcode',
-                        help='Name of the method to use (e.g., "badcode")')
+    parser.add_argument('--method', type=str, default='spectralsignature',
+                        help='Name of the method to use (e.g., "spectralsignature")')
 
     args = parser.parse_args()
 
     # TODO: FIX THIS
-    defender: ActivationClustering = ActivationClustering()
+    defender = get_defender(defense_identifier=args.method)
 
     defender.run_defense(data_dir=args.input_dir, dest_dir=args.output_dir)
 

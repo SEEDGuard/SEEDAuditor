@@ -217,7 +217,7 @@ def main(input_file, output_file, target, trigger, identifier, fixed_trigger, ba
     de_output_file = 'defense.log'
     with open(de_output_file, 'a') as w:
         print(
-            json.dumps({'pred_model_dir': output_file}),
+            json.dumps({'pred_model_dir': output_file}), # path to directory where model files are placed.
             file=w,
         )
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
