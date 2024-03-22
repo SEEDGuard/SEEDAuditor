@@ -215,9 +215,10 @@ def main(input_file, output_file, target, trigger, identifier, fixed_trigger, ba
 
     args = parser.parse_args()
     de_output_file = 'defense.log'
+    path_to_model_directory = 'SEEDAuditor/core/defense/spectral_signature/model_directory'
     with open(de_output_file, 'a') as w:
         print(
-            json.dumps({'pred_model_dir': output_file}), # path to directory where model files are placed.
+            json.dumps({'pred_model_dir': path_to_model_directory}), # path to directory where model files are placed.
             file=w,
         )
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -229,8 +230,8 @@ def main(input_file, output_file, target, trigger, identifier, fixed_trigger, ba
     tokenizer_name = 'roberta-base'
     tokenizer = tokenizer_class.from_pretrained(tokenizer_name, do_lower_case=args.do_lower_case)
     # tokenizer = tokenizer_class.from_pretrained(transformer_path, do_lower_case=args.do_lower_case)
-    logger.info("defense by model which from {}".format(output_file))
-    model = model_class.from_pretrained(output_file)
+    logger.info("defense by model which from {}".format(path_to_model_directory))
+    model = model_class.from_pretrained(path_to_model_directory)
     model.config.output_hidden_states = True
     model.to(args.device)
     examples, poison_examples, clean_examples, epsilon = poison_train_data(input_file, target, trigger, identifier,
