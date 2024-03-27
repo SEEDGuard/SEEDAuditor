@@ -24,5 +24,5 @@ COPY main.py .
 ENTRYPOINT ["python", "main.py"]
 
 # Specify default arguments to CMD (can be overridden when running the container)
-CMD ["--input_dir", "test/badcode/data/input/input_raw_test.jsonl", "--output_dir", "test/badcode/data/output/", "--method", "badcode"]
+CMD ["--input_dir", "test/spectral_signature/data/input/rb_function.txt", "--output_dir", "test/spectral_signature/data/output/", "--method", "spectralsignature"]
 

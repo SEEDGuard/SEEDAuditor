@@ -3,6 +3,7 @@ import json
 import logging
 import os
 import random
+from types import SimpleNamespace
 
 import numpy as np
 from numpy.linalg import eig
@@ -189,33 +190,26 @@ def detect_anomalies(representations, examples, eps, beta, output_file):
     logger.info('finish detecting')
 
 
-def main(input_file, output_file, target, trigger, identifier, fixed_trigger, baits,
-         percent, position, multi_times, test_data_len, eps, poison_ratio, beta, poison_mode):
+def call_spectral_signature(input_file, output_file, target, trigger, identifier, fixed_trigger, baits,
+                            percent, position, multi_times, test_data_len, eps, poison_ratio, beta, poison_mode,
+                            model_type='roberta', do_lower_case=False, max_seq_length=200, data_dir='',
+                            train_file="raw_train.txt", batch_size=16, pred_model_dir=''):
     logging.basicConfig(level=logging.INFO,
                         format='%(asctime)s - %(levelname)s - %(name)s -   %(message)s  (%(filename)s:%(lineno)d, '
                                '%(funcName)s())',
                         datefmt='%m/%d/%Y %H:%M:%S')
 
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--model_type", default='roberta', type=str,
-                        help="Model type selected in the list: " + ", ".join(MODEL_CLASSES.keys()))
-    parser.add_argument("--do_lower_case", action='store_true',
-                        help="Set this flag if you are using an uncased model.")
-    parser.add_argument("--max_seq_length", default=200, type=int,
-                        help="The maximum total input sequence length after tokenization. Sequences longer "
-                             "than this will be truncated, sequences shorter will be padded.")
-    parser.add_argument("--data_dir", default=r'', type=str,
-                        help="The input data dir. Should contain the .tsv files (or other data files) for the task.")
-    parser.add_argument("--train_file", default="raw_train.txt", type=str,
-                        help="train file")
-    parser.add_argument("--batch_size", type=int, default=16)
+    args = SimpleNamespace()
+    args.model_type = model_type
+    args.do_lower_case = do_lower_case
+    args.max_seq_length = max_seq_length
+    args.data_dir = data_dir
+    args.train_file = train_file
+    args.batch_size = batch_size
+    args.pred_model_dir = pred_model_dir
 
-    parser.add_argument("--pred_model_dir", type=str,default='',
-                        help='model for prediction')  # model for prediction
-
-    args = parser.parse_args()
-    de_output_file = 'defense.log'
-    path_to_model_directory = 'SEEDAuditor/core/defense/spectral_signature/model_directory'
+    de_output_file = f'{output_file}/defense.log'
+    path_to_model_directory = 'core/defense/spectral_signature/model_directory'
     with open(de_output_file, 'a') as w:
         print(
             json.dumps({'pred_model_dir': path_to_model_directory}), # path to directory where model files are placed.
@@ -318,5 +312,5 @@ def init_spectral_signature(input_dir: str, output_dir: str):
     beta = 1.5
     baits = 0
     random.seed(0)
-    main(INPUT_FILE, OUTPUT_FILE, target, trigger, identifier, fixed_trigger, baits,
+    call_spectral_signature(INPUT_FILE, OUTPUT_FILE, target, trigger, identifier, fixed_trigger, baits,
          percent, position, multi_times, test_data_len, eps, poison_ratio, beta, poison_mode)
