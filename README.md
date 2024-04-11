@@ -23,6 +23,14 @@ reference for docker commands :
 docker build -t spectralsignature:1.1 .
 docker run -it -v test_path --input_dir input_path --output_dir output_path --method method_name
 
+
+## Paper List
+
+| Year-Id | Title                                                                                                                               | Venue Name | Replication Package                                                  | If Integrated | Current Contributors| 
+| ------- | ----------------------------------------------------------------------------------------------------------------------------------- | ---------- | -------------------------------------------------------------------- | ------------- | --------- |
+|2023-2 |[MalWuKong: Towards Fast, Accurate, and Multilingual Detection of Malicious Code Poisoning in OSS Supply Chains.](https://doi.org/10.1109/ASE56229.2023.00073)        |ASE    |
+|  2023-1       | [Backdooring Neural Code Search](https://arxiv.org/pdf/2305.17506.pdf)                                                                | ACL    | [link](https://github.com/wssun/BADCODE)                                                        |  | [pvinoda](https://github.com/SEEDGuard/SEEDPoisoner/tree/main/core/BadCode)
+
 ## Contributing
 
 SEEDAuditor thrives on community contributions. Whether you're interested in enhancing its security features, expanding the API, or improving the current functionality, your contributions are welcome. Please refer to our contribution guideline at [CONTRIBUTING.md](https://github.com/SEEDGuard/SEEDPoisoner/blob/main/CONTRIBUTING.md) for more information on how to contribute. Also refer to our [Docker](https://github.com/SEEDGuard/SEEDUtils/blob/main/template/Dockerfile) template if you are coming up with new Methods for the task.
