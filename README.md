@@ -23,13 +23,20 @@ reference for docker commands :
 docker build -t spectralsignature:1.1 .
 docker run -it -v test_path --input_dir input_path --output_dir output_path --method method_name
 
+## Related Works
 
-## Paper List
+ Paper Id | Year-Id | Title   | Venue  | Replication Package  | If Integrated?     | Approved By Author? |  Current Contributors |
+| --------| --------| --------------------------------------------------------------------------------------------- | ------ |  ------ |----------------------------------------------------------------------------------------------- | ------------------ | ---------- |
+| 1       | 2023-1  | [Backdooring Neural Code Search](https://arxiv.org/pdf/2305.17506.pdf)    | ACL    | [link](https://github.com/wssun/BADCODE)         |  |     | pvinoda |
+| 2       | 2023-2  |  [MalWuKong: Towards Fast, Accurate, and Multilingual Detection of Malicious Code Poisoning in OSS Supply Chains.](https://doi.org/10.1109/ASE56229.2023.00073)    |  ASE  |    |    |    
+| 3       |         | [Multi-target Backdoor Attacks for Code Pre-trained Models](https://arxiv.org/pdf/2306.08350.pdf)  | ACL    | [link](https://github.com/Lyz1213/Backdoored_PPLM)   |             | | 
+| 4       |         | [CoProtector: Protect Open-Source Code against Unauthorized Training Usage with Data Poisoning](https://arxiv.org/pdf/2110.12925.pdf) | WWW    | [link](https://github.com/v587su/CoProtector)        |     |   | 
+| 5       |         | [You See What I Want You to See: Poisoning Vulnerabilities in Neural Code Search](https://yuleisui.github.io/publications/fse22a.pdf)     | FSE    | [link](https://github.com/CGCL-codes/naturalcc)   |    |   | 
+| 6       |         | [You Autocomplete Me: Poisoning Vulnerabilities in Neural Code Completion](https://arxiv.org/pdf/2007.02220v3.pdf)                      | USENIX |                     |                    
+| 7       |         | [Stealthy Backdoor Attack for Code Models](https://arxiv.org/pdf/2301.02496.pdf)           | TSE    | [link](https://github.com/yangzhou6666/adversarial-backdoor-for-code-models?tab=readme-ov-file) |          |  | 
+| 8       |         | [DeepPayload: Black-box Backdoor Attack on Deep Learning Models through Neural Payload Injection](https://doi.org/10.1109/ICSE43902.2021.00035)   |  ICSE    |
+| 9       |         | [AdvDoor: adversarial backdoor attack of deep learning system](https://doi.org/10.1145/3460319.3464809)       |ISSTA  |
 
-| Year-Id | Title                                                                                                                               | Venue Name | Replication Package                                                  | If Integrated | Current Contributors| 
-| ------- | ----------------------------------------------------------------------------------------------------------------------------------- | ---------- | -------------------------------------------------------------------- | ------------- | --------- |
-|2023-2 |[MalWuKong: Towards Fast, Accurate, and Multilingual Detection of Malicious Code Poisoning in OSS Supply Chains.](https://doi.org/10.1109/ASE56229.2023.00073)        |ASE    |
-|  2023-1       | [Backdooring Neural Code Search](https://arxiv.org/pdf/2305.17506.pdf)                                                                | ACL    | [link](https://github.com/wssun/BADCODE)                                                        |  | [pvinoda](https://github.com/SEEDGuard/SEEDPoisoner/tree/main/core/BadCode)
 
 ## Contributing
 
