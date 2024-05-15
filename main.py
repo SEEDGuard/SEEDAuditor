@@ -1,6 +1,6 @@
 import argparse
 
-from core.defender import SpectralSignature, ActivationClustering
+from core.defender import SpectralSignature, ActivationClustering, AFRAIDoor
 
 
 def get_defender(defense_identifier):
@@ -11,6 +11,9 @@ def get_defender(defense_identifier):
     elif defense_identifier.lower() == 'activationclustering':
         print("Returning Activation Clustering Instance")
         return ActivationClustering()
+        elif defense_identifier.lower() == 'afraidoor':
+        print("Returning AFRAIDoor Instance")
+        return AFRAIDoor()
     else:
         raise ValueError(f"Invalid Defense name: {defense_identifier}")
 
