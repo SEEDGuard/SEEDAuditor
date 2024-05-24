@@ -4,8 +4,8 @@ Welcome to SEEDAuditor, a pivotal component of the SEEDGuard.AI initiative. This
 
 ## Contents
 - [Project Overview](#project-overview)
-		- [Key Features](#key-features)
-	 - [Goals](#goals)
+	- [Key Features](#key-features)
+	- [Goals](#goals)
 - [Getting Started](#getting-started)
 - [Related Works](#related-works)
 - [Contributing](#contributing)
