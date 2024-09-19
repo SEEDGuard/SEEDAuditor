@@ -23,6 +23,15 @@ reference for docker commands :
 docker build -t spectralsignature:1.1 .
 docker run -it -v test_path --input_dir input_path --output_dir output_path --method method_name
 
+## Methods
+
+| Defense Method | Used works | Implementation |
+|----------------|------------|----------------|
+|  Spectral Signature              |            |                |
+|   Activation Clustering             |            |                |
+|  Onion              |            |                |
+
+
 ## Related Works
 
  Paper Id | Year-Id | Title   | Venue  | Replication Package  | If Integrated?     | Approved By Author? |  Current Contributors |
