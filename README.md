@@ -25,11 +25,11 @@ docker run -it -v test_path --input_dir input_path --output_dir output_path --me
 
 ## Methods
 
-| Defense Method | Used works | Implementation |
-|----------------|------------|----------------|
-|  Spectral Signature              |            |                |
-|   Activation Clustering             |            |                |
-|  Onion              |            |                |
+| Defense Method | Used works | Implementation | Status |
+|----------------|------------|----------------| ----------------|
+|  Spectral Signature              |   [Link](https://github.com/SEEDGuard/SEEDAuditor/blob/main/core/defense/spectral_signature/spectral_signature.py)         |                |               |
+|   Activation Clustering             |            |    [Link](https://github.com/SEEDGuard/SEEDAuditor/blob/main/core/defense/activation_clustering/activation_clustering.py)            |               |
+|  Onion              |            |                |               |
 
 
 ## Related Works
