@@ -2,6 +2,15 @@
 
 Welcome to SEEDAuditor, a pivotal component of the SEEDGuard.AI initiative. This project is dedicated to enhancing the security and integrity of data for AI models and corresponding datasets in software engineering. Basically this repository is for Auditing software engineering data.
 
+## Contents
+- [Project Overview](#project-overview)
+  - [Key Features](#key-features)
+  - [Goals](#goals)
+- [Getting Started](#getting-started)
+- [Related Works](#related-works)
+- [Contributing](#contributing)
+- [Miscallaneous File Links](#miscallaneous-file-links)
+
 ## Project Overview
 
 SEEDAuditor is an open-source effort under the broader umbrella of SEEDGuard.AI, aimed at revolutionizing AI for Software Engineering with a keen focus on data security. Our mission is to safeguard AI models against data poisoning and backdoor threats, ensuring the development of trustworthy AI systems.
